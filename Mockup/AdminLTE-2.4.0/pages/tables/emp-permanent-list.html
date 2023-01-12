@@ -128,7 +128,7 @@
       </form>
       <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
-     <ul class="sidebar-menu" data-widget="tree">
+      <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
 
        
@@ -167,7 +167,7 @@
 		  </ul>
 		 </li> 
 		 
-		  <li class="treeview active">
+		  <li class="treeview">
           <a href="#">
             <i class="fa fa-table"></i> <span>ทะเบียนประวัติ</span>
             <span class="pull-right-container">
@@ -183,7 +183,10 @@
 		  </ul>
 		  
 		   
-		 </li> 
+		 </li>
+
+
+		 
         
 		 <li class="treeview">
           <a href="#">
@@ -199,7 +202,25 @@
 		  
 		   
 		 </li> 
-        
+		 
+		 
+		 <li class="treeview active">
+          <a href="#">
+            <i class="fa fa-table"></i> <span>ทะเบียนประวัติลูกจ้างประจำ</span>
+            <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+          </a>
+          <ul class="treeview-menu">
+			<li class="active"><a href="emp-permanent-list.html"><i class="fa fa-circle-o"></i> ประวัติลูกจ้างประจำ</a></li>
+			<li><a href="empnamechange-permanent-history-list.html"><i class="fa fa-circle-o"></i> ประวัติการเปลี่ยนชื่อ</a></li>
+			<li ><a href="salary-permanent-history-list.html"><i class="fa fa-circle-o"></i> ประวัติเงินเดือน</a></li>
+			<li ><a href="train-permanent-history-list.html"><i class="fa fa-circle-o"></i> ประวัติการฝึกอบรม</a></li>
+			<li ><a href="train-permanent-special-history-list.html"><i class="fa fa-circle-o"></i> ประวัติการปฏิบัติราชการพิเศษ</a></li>
+		  </ul>
+		  
+		   
+		 </li>
       </ul>
     </section>
     <!-- /.sidebar -->
@@ -210,13 +231,13 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        ประวัติข้าราชการ
+        ประวัติลูกจ้างประจำ
         <small></small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="mainMenu.aspx"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-        <li><a href="#">ทะเบียนประวัติ</a></li>
-        <li class="active">ประวัติข้าราชการ</li>
+        <li><a href="#">ทะเบียนประวัติลูกจ้างประจำ</a></li>
+        <li class="active">ประวัติลูกจ้างประจำ</li>
       </ol>
     </section>
 
@@ -227,325 +248,53 @@
           <div class="box">
             <div class="box-header">
               
+			 <div class="col-md-11">
 			 
+				<div class="form-group col-md-3">
+					<label>คำค้นหา</label>
+					<input type="text" class="form-control" />
+				</div>
+				<div class="form-group col-md-3">
+				<br>
+					<a class="btn btn-primary">ค้นหา</a>
+					<a  href="emp-permanent-list-manage.html" class="btn btn-success">เพิ่ม</a>
+				</div>
+			  </div>
             </div>
 			
 			
 			  
             <!-- /.box-header -->
             <div class="box-body">
-				<div class="col-md-12">
-				
-					<div class="row">
-						<div class="form-group col-md-2">
-							<label>คำนำหน้าชื่อ</label>
-							<select class="form-control"><option>กรุณาเลือก</option><option>นาย</option><option>นาง</option><option>นางสาว</option></select>
-						</div>
-						<div class="form-group col-md-5">
-							<label>ชื่อ-นามสกุล</label>
-							<input type="text" class="form-control">
-						</div>
-							<div class="form-group col-md-5">
-							<label>ชื่อ-นามสกุล (อังกฤษ)</label>
-							<input type="text" class="form-control">
-						</div>
-					</div>
-					<div class="row">
-						<div class="form-group col-md-6">
-							<label>รูปถ่าย</label>
-							<input type="file" class="form-control">
-						</div>
-						<div class="form-group col-md-6">
-							<label>เพศ</label>
-							 
-								 <fieldset id="group1">
-    <input type="radio" value="value1" name="group1"> ชาย
-    <input type="radio" value="value2" name="group1"> หญิง
-  </fieldset>
-							 
-						</div>
-					</div>
-				
-					<div class="row">
-						<div class="form-group col-md-4">
-							<label>เลขบัตรประจำตัวประชาชน</label>
-							<input type="text" class="form-control">
-						</div>
-						<div class="form-group col-md-4">
-							<label>เลขประจำตัวข้าราชการ</label>
-							<input type="text" class="form-control">
-						</div>
-						<div class="form-group col-md-4">
-							<label>เลขที่ตำแหน่ง</label>
-							<select class="form-control"><option>กรุณาเลือก</option></select>
-						</div>
-					</div>
-					<div class="row">
-						<div class="form-group col-md-4">
-								<label>วันที่เริ่มรับราชการ</label>
-								<div class="input-group date">
-								  <div class="input-group-addon">
-									<i class="fa fa-calendar"></i>
-								  </div>
-								  <input type="text" class="form-control pull-right" id="datepicker">
-								</div>
-						</div>
-						<div class="form-group col-md-4">
-							<label>ระดับ</label>
-							<select class="form-control"><option>กรุณาเลือก</option></select>
-						</div>
-						<div class="form-group col-md-4">
-								<label>วันที่เกษียณ</label>
-								<div class="input-group date">
-								  <div class="input-group-addon">
-									<i class="fa fa-calendar"></i>
-								  </div>
-								  <input type="text" class="form-control pull-right" id="datepicker">
-								</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="form-group col-md-4">
-							<label>เงินเดือน</label>
-						<input type="text" class="form-control">
-						</div>
-						<div class="form-group col-md-4">
-							<label>เงินค่าครองชีพ</label>
-							<input type="text" class="form-control">
-						</div>
-						<div class="form-group col-md-4">
-								<label>วันที่ทำบัตรใหม่</label>
-								<div class="input-group date">
-								  <div class="input-group-addon">
-									<i class="fa fa-calendar"></i>
-								  </div>
-								  <input type="text" class="form-control pull-right" id="datepicker">
-								</div>
-						</div>
-					</div>
-					 
-					
-					<div class="row">
-						<div class="form-group col-md-4">
-							<label>วุิฒิการศึกษา</label>
-						<select class="form-control"><option>กรุณาเลือก</option></select>
-						</div>
-						<div class="form-group col-md-4">
-							<label>สถาบันการศึกษา</label>
-							<select class="form-control"><option>กรุณาเลือก</option></select>
-						</div>
-						<div class="form-group col-md-4">
-							<label>สาขาวิชา</label>
-							<select class="form-control"><option>กรุณาเลือก</option></select>
-						</div>
-					</div>
-					
-					
-					<div class="row">
-						<div class="form-group col-md-4">
-							<label>สังกัด</label>
-						<select class="form-control"><option>กรุณาเลือก</option></select>
-						</div>
-						<div class="form-group col-md-4">
-							<label>ตำแหน่งทางสายงาน</label>
-							<select class="form-control"><option>กรุณาเลือก</option></select>
-						</div>
-						<div class="form-group col-md-4">
-							<label>ตำแหน่งทางบริหาร</label>
-							<select class="form-control"><option>กรุณาเลือก</option></select>
-						</div>
-					</div>
-					
-					<div class="row">
-						<div class="form-group col-md-4">
-							<label>อายุ (ปี)</label>
-							<input type="text" class="form-control"  value="44">
-						</div>
-						<div class="form-group col-md-4">
-							<label>อายุครบ 60 เมื่อ</label>
-							<div class="input-group date">
-								  <div class="input-group-addon">
-									<i class="fa fa-calendar"></i>
-								  </div>
-								  <input type="text" value="2582/01/31" class="form-control pull-right" id="datepicker">
-								</div>
-						</div>
-						<div class="form-group col-md-4">
-							<label>อายุราชการ</label>
-							<input type="text" class="form-control" value="20 ปี 5 เดือน">
-						</div>
-					
-					</div>
-					
-					<div class="row">
-						<div class="form-group col-md-6">
-							<label>สถานะปัจจุบัน</label>
-						<select class="form-control"><option>กรุณาเลือก</option></select>
-						</div>
-						<div class="form-group col-md-6">
-							<label>หมายเหตุคำสั่ง</label>
-							<select class="form-control"><option>กรุณาเลือก</option></select>
-						</div>
-						 
-					</div>
-					
-					
-					<h4>ข้อมูลส่วนตัว</h4>
-					
-					<div class="row">
-						<div class="form-group col-md-4">
-								<label>วันเกิด</label>
-								<div class="input-group date">
-								  <div class="input-group-addon">
-									<i class="fa fa-calendar"></i>
-								  </div>
-								  <input type="text" class="form-control pull-right" id="datepicker">
-								</div>
-						</div>
-						<div class="form-group col-md-4">
-							<label>กรูปเลือด</label>
-							<select class="form-control"><option>กรุณาเลือก</option></select>
-						</div>
-						<div class="form-group col-md-4">
-							<label>ศาสนา</label>
-							<select class="form-control"><option>กรุณาเลือก</option></select>
-						</div>
-					</div>
-					
-					<div class="row">
-						<div class="form-group col-md-12">
-							<label>สถานที่เกิด</label>
-							<textarea class="form-control"></textarea>
-						</div>
-					</div>
-					<div class="row">
-						<div class="form-group col-md-4">
-								<label>สถานภาพ</label>
-								<select class="form-control"><option>กรุณาเลือก</option></select>
-						</div>
-						<div class="form-group col-md-4">
-								<label>เชื้อชาติ</label>
-								<input type="text" class="form-control">
-						</div>
-						<div class="form-group col-md-4">
-								<label>สัญชาติ</label>
-								<input type="text" class="form-control">
-						</div>
-					</div>
-					<h4>ที่อยู่ตามทะเบียนบ้าน</h4>
-						<div class="row">
-						<div class="form-group col-md-4">
-								<label>เลขที่</label>
-								<input type="text" class="form-control">
-						</div>
-						<div class="form-group col-md-4">
-								<label>ซอย</label>
-								<input type="text" class="form-control">
-						</div>
-						<div class="form-group col-md-4">
-								<label>ถนน</label>
-								<input type="text" class="form-control">
-						</div>
-					</div>
-					<div class="row">
-						<div class="form-group col-md-4">
-								<label>จังหวัด</label>
-								<select class="form-control"><option>กรุณาเลือก</option></select>
-						</div>
-						<div class="form-group col-md-4">
-								<label>อำเภอ</label>
-								<select class="form-control"><option>กรุณาเลือก</option></select>
-						</div>
-						<div class="form-group col-md-4">
-								<label>ตำบล</label>
-								<select class="form-control"><option>กรุณาเลือก</option></select>
-						</div>
-					</div>
-					<div class="row">
-						<div class="form-group col-md-4">
-								<label>รหัสไปรษณีย์</label>
-								<input type="text" class="form-control">
-						</div>
-						<div class="form-group col-md-4">
-								<label>โทรศัพท์</label>
-								<input type="text" class="form-control">
-						</div>
-						<div class="form-group col-md-4">
-								<label>e-mail</label>
-								<input type="text" class="form-control">
-						</div>
-					</div>
-					
-					<div class="row">
-						<div class="form-group col-md-12">
-								<label>ที่อยู่ปัจจุบัน</label>
-								<textarea class="form-control"></textarea>
-						</div>
-						 
-					</div>
-					
-					<div class="row">
-						<div class="form-group col-md-4">
-								<label>วันเสียชีวิต</label>
-								<div class="input-group date">
-								  <div class="input-group-addon">
-									<i class="fa fa-calendar"></i>
-								  </div>
-								  <input type="text" class="form-control pull-right" id="datepicker">
-								</div>
-						</div>
-						<div class="form-group col-md-4">
-							<label>สาเหตุการตาย</label>
-							<input type="text" class="form-control">
-						</div>
-						<div class="form-group col-md-4">
-							<label>ความสามารถพิเศษ</label>
-							<textarea class="form-control"></textarea>
-						</div>
-					</div>
-					
-					<div class="row">
-						<div class="form-group col-md-6">
-							<label>บิดา</label>
-							<input type="text" class="form-control">
-						</div>
-						<div class="form-group col-md-6">
-								<label>วันที่บิดาเสียชีวิต</label>
-								<div class="input-group date">
-								  <div class="input-group-addon">
-									<i class="fa fa-calendar"></i>
-								  </div>
-								  <input type="text" class="form-control pull-right" id="datepicker">
-								</div>
-						</div>
-						
-						 
-					</div>
-					<div class="row">
-						<div class="form-group col-md-6">
-							<label>มารดา</label>
-							<input type="text" class="form-control">
-						</div>
-						<div class="form-group col-md-6">
-								<label>วันที่มารดาเสียชีวิต</label>
-								<div class="input-group date">
-								  <div class="input-group-addon">
-									<i class="fa fa-calendar"></i>
-								  </div>
-								  <input type="text" class="form-control pull-right" id="datepicker">
-								</div>
-						</div>
-						
-						 
-					</div>
-					
-					<div class="row">
-						<div class="col-md-12">
-							<a class="btn btn-primary">บันทึก</a>
-							<a class="btn btn-danger" href="emp-list.html">ย้อนกลับ</a>
-						</div>
-					</div>
+			
+			  
+              <table id="example3" class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                  <th>ชื่อ-นามสกุล</th>
+                  
+                  <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>นายกอไก่ </td>
+                  
+                  <td>
+					<a class="btn btn-success"><i class="fa fa-edit"></i></a>
+					<a class="btn btn-danger"><i class="fa fa-trash"></i></a>
+				  </td>
+                </tr>
                
+			    <tr>
+                  <td>นางสาวขอไข่</td>
+                  
+                  <td>
+					<a class="btn btn-success"><i class="fa fa-edit"></i></a>
+					<a class="btn btn-danger"><i class="fa fa-trash"></i></a>
+				  </td>
+                </tr>
+              </table>
             </div>
             <!-- /.box-body -->
           </div>

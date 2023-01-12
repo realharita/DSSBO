@@ -167,7 +167,7 @@
 		  </ul>
 		 </li> 
 		 
-		  <li class="treeview active">
+		  <li class="treeview ">
           <a href="#">
             <i class="fa fa-table"></i> <span>ทะเบียนประวัติ</span>
             <span class="pull-right-container">
@@ -175,7 +175,7 @@
                 </span>
           </a>
           <ul class="treeview-menu">
-			<li class="active"><a href="emp-list.html"><i class="fa fa-circle-o"></i> ประวัติข้าราชการ</a></li>
+			<li class=""><a href="emp-list.html"><i class="fa fa-circle-o"></i> ประวัติข้าราชการ</a></li>
 			<li><a href="empnamechange-history-list.html"><i class="fa fa-circle-o"></i> ประวัติการเปลี่ยนชื่อ</a></li>
 			<li ><a href="salary-history-list.html"><i class="fa fa-circle-o"></i> ประวัติเงินเดือน</a></li>
 			<li ><a href="train-history-list.html"><i class="fa fa-circle-o"></i> ประวัติการฝึกอบรม</a></li>
@@ -199,6 +199,24 @@
 		  
 		   
 		 </li> 
+		 
+		  <li class="treeview active">
+          <a href="#">
+            <i class="fa fa-table"></i> <span>ทะเบียนประวัติลูกจ้างประจำ</span>
+            <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+          </a>
+          <ul class="treeview-menu">
+			<li class="active"><a href="emp-permanent-list.html"><i class="fa fa-circle-o"></i> ประวัติลูกจ้างประจำ</a></li>
+			<li><a href="empnamechange-permanent-history-list.html"><i class="fa fa-circle-o"></i> ประวัติการเปลี่ยนชื่อ</a></li>
+			<li ><a href="salary-permanent-history-list.html"><i class="fa fa-circle-o"></i> ประวัติเงินเดือน</a></li>
+			<li ><a href="train-permanent-history-list.html"><i class="fa fa-circle-o"></i> ประวัติการฝึกอบรม</a></li>
+			<li ><a href="train-permanent-special-history-list.html"><i class="fa fa-circle-o"></i> ประวัติการปฏิบัติราชการพิเศษ</a></li>
+		  </ul>
+		  
+		   
+		 </li>
         
       </ul>
     </section>
@@ -210,13 +228,13 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        ประวัติข้าราชการ
+        ประวัติลูกจ้างประจำ
         <small></small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="mainMenu.aspx"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-        <li><a href="#">ทะเบียนประวัติ</a></li>
-        <li class="active">ประวัติข้าราชการ</li>
+        <li><a href="#">ทะเบียนประวัติลูกจ้างประจำ</a></li>
+        <li class="active">ประวัติลูกจ้างประจำ</li>
       </ol>
     </section>
 
@@ -241,11 +259,16 @@
 							<label>คำนำหน้าชื่อ</label>
 							<select class="form-control"><option>กรุณาเลือก</option><option>นาย</option><option>นาง</option><option>นางสาว</option></select>
 						</div>
-						<div class="form-group col-md-5">
+						<div class="form-group col-md-4">
 							<label>ชื่อ-นามสกุล</label>
 							<input type="text" class="form-control">
 						</div>
-							<div class="form-group col-md-5">
+						
+						<div class="form-group col-md-2">
+							<label>คำนำหน้าชื่อ</label>
+							<select class="form-control"><option>กรุณาเลือก</option><option>นาย</option><option>นาง</option><option>นางสาว</option></select>
+						</div>
+							<div class="form-group col-md-4">
 							<label>ชื่อ-นามสกุล (อังกฤษ)</label>
 							<input type="text" class="form-control">
 						</div>
@@ -272,7 +295,7 @@
 							<input type="text" class="form-control">
 						</div>
 						<div class="form-group col-md-4">
-							<label>เลขประจำตัวข้าราชการ</label>
+							<label>เลขบัตรประจำตัวพนักงานราชการ</label>
 							<input type="text" class="form-control">
 						</div>
 						<div class="form-group col-md-4">
@@ -291,7 +314,7 @@
 								</div>
 						</div>
 						<div class="form-group col-md-4">
-							<label>ระดับ</label>
+							<label>กลุ่ม</label>
 							<select class="form-control"><option>กรุณาเลือก</option></select>
 						</div>
 						<div class="form-group col-md-4">
@@ -351,8 +374,7 @@
 							<select class="form-control"><option>กรุณาเลือก</option></select>
 						</div>
 						<div class="form-group col-md-4">
-							<label>ตำแหน่งทางบริหาร</label>
-							<select class="form-control"><option>กรุณาเลือก</option></select>
+							
 						</div>
 					</div>
 					
@@ -542,7 +564,7 @@
 					<div class="row">
 						<div class="col-md-12">
 							<a class="btn btn-primary">บันทึก</a>
-							<a class="btn btn-danger" href="emp-list.html">ย้อนกลับ</a>
+							<a class="btn btn-danger" href="emp-permanent-list.html">ย้อนกลับ</a>
 						</div>
 					</div>
                
